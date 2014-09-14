@@ -4,25 +4,23 @@ import java.util.List;
 
 import javax.xml.bind.JAXBException;
 
-import com.vaadin.data.util.IndexedContainer;
+import com.vaadin.data.util.BeanItemContainer;
 
-public class IndexedXMLContainer extends IndexedContainer implements
+public class IndexedXMLContainer<T> extends BeanItemContainer<T> implements
 		XMLContainer {
 
-	public IndexedXMLContainer(String filePath, Class classe)
-			throws JAXBException {
+	public IndexedXMLContainer(Class<? super T> type, String filePath,
+			Class classe) throws JAXBException {
 
-		
-			addAllObjectToContainer(filePath, classe);
-		
+		super(type);
+
+		addAllObjectToContainer(filePath, classe);
 	}
 
 	private void addAllObjectToContainer(String filePath, Class classe)
 			throws JAXBException {
 		List allObject = XMLParser.getAllElements(classe, filePath);
-		
-		for(Object object : allObject){
-			addItem(object);
-		}
+
+		addAll(allObject);
 	}
 }

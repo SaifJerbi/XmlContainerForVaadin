@@ -22,7 +22,7 @@ public interface XMLContainer extends Container.Indexed, Container.Sortable,
 		public static XMLContainer newInstance(String filePath, Class classe) {
 
 			try {
-				return new IndexedXMLContainer(filePath, classe);
+				return new IndexedXMLContainer(classe, filePath, classe);
 			} catch (JAXBException e) {
 				throw new IllegalArgumentException(
 						"Cannot parse the given XML file");
