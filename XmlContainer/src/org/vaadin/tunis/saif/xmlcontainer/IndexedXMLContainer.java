@@ -9,10 +9,9 @@ import com.vaadin.data.util.BeanItemContainer;
 public class IndexedXMLContainer<T> extends BeanItemContainer<T> implements
 		XMLContainer {
 
-	public IndexedXMLContainer(Class<? super T> type, String filePath,
-			Class classe) throws JAXBException {
+	public IndexedXMLContainer(Class<? super T> classe, String filePath) throws JAXBException {
 
-		super(type);
+		super(classe);
 
 		addAllObjectToContainer(filePath, classe);
 	}
