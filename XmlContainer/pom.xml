@@ -6,6 +6,40 @@
 	<version>1.0.0</version>
 	<name>XmlContainer</name>
 	<description>Simple Vaadin Container implementation that reads data in XML format to populate the Container. The add-on works with Vaadin 7</description>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.author>Saif eddine JERBI / Vaadin Tunis</project.author>
+		<project.license>Apache License 2.0</project.license>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<configuration>
+						<archive>
+							<index>true</index>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							</manifest>
+							<manifestEntries>
+								<Vaadin-Package-Version>1</Vaadin-Package-Version>
+								<Vaadin-License-Title>${project.license}</Vaadin-License-Title>
+								<Implementation-Vendor>${project.author}</Implementation-Vendor>
+								<Implementation-Title>${project.artifactId}</Implementation-Title>
+							</manifestEntries>
+						</archive>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	
+	
 	<dependencies>
 		<dependency>
 			<groupId>com.vaadin</groupId>
