@@ -5,7 +5,7 @@
 	<artifactId>XmlContainer</artifactId>
 	<version>1.0.0</version>
 	<name>XmlContainer</name>
-	<description>Simple Vaadin Container implementation that reads data in XML format to populate the Container. The add-on works with Vaadin 7</description>
+	<description>Simple Vaadin Container implementation that Bind data from XML file to populate the Container. The add-on works with Vaadin 7</description>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
