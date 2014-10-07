@@ -1,4 +1,4 @@
-package org.vaadin.tunis.saif.xmlcontainer;
+package org.vaadin.tunis.saif.xmlcontainer.jaxb;
 
 import java.util.List;
 
@@ -7,9 +7,10 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.stream.StreamSource;
 
-public class XMLParser {
 
-	public static List<Object> getAllElements(Class classe, String filePath)
+public class JaxBParser {
+
+	public static List<Object> jaxbObjectsBinding(Class classe, String filePath)
 			throws JAXBException {
 		JAXBContext jc = JAXBContext.newInstance(Wrapper.class, classe);
 		// Unmarshal

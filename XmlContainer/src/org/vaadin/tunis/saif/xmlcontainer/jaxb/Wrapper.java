@@ -1,4 +1,4 @@
-package org.vaadin.tunis.saif.xmlcontainer;
+package org.vaadin.tunis.saif.xmlcontainer.jaxb;
 
 import java.util.*;
 import javax.xml.bind.annotation.XmlAnyElement;
