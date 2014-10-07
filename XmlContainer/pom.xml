@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vaadin.tunis.saif.xmlcontainer</groupId>
 	<artifactId>XmlContainer</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<name>XmlContainer</name>
 	<description>Simple Vaadin Container implementation that reads data in XML format to populate the Container. The add-on works with Vaadin 7</description>
 	
