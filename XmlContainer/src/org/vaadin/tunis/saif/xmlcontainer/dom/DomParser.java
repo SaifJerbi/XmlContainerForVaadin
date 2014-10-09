@@ -42,6 +42,8 @@ public class DomParser {
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document document = builder.parse(new File(filePath));
 
+		document.getDocumentElement().normalize();
+		
 		List<Object> objectList = new ArrayList();
 
 		HashMap<String, String> entityFieldMap = EntityParser
