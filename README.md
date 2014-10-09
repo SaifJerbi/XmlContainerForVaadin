@@ -1,7 +1,7 @@
 XmlContainerForVaadin
 =====================
 
-Simple Vaadin Container implementation that Bind data from XML file to BeanContainer. This addon use JaxB spec which is implemented in Java1.6+; your entity should have @XmlRootElement annotation to allow XML unmarshalling.
+Simple Vaadin Container implementation that Bind data from XML file to BeanContainer. This addon use JaxB spec and the Dom Xml Parser Technic. Take a look to the Wiki for more details.
 
 Quickstart
 =====================
