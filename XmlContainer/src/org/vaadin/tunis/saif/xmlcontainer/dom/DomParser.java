@@ -47,7 +47,7 @@ public class DomParser {
 		HashMap<String, String> entityFieldMap = EntityParser
 				.getFieldsName(classe);
 
-		NodeList nodeList = document.getDocumentElement().getChildNodes();
+		NodeList nodeList = document.getElementsByTagName(classe.getSimpleName());
 		for (int i = 0; i < nodeList.getLength(); i++) {
 			// We have encountered an <[object]> tag.
 			Node node = nodeList.item(i);
