@@ -4,10 +4,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
-import org.vaadin.tunis.saif.xmlcontainer.test.Employee;
 
 public class EntityParser {
 	public static HashMap<String, String> getFieldsName(Class cls) {
@@ -35,14 +31,4 @@ public class EntityParser {
 		return null;
 	}
 
-	public static void main(String[] args) {
-		HashMap<String, String> ss = getFieldsName(Employee.class);
-
-		Iterator itr = ss.entrySet().iterator();
-		while (itr.hasNext()) {
-			Map.Entry pairs = (Map.Entry) itr.next();
-			System.out.println(pairs.getKey() + " " + pairs.getValue());
-		}
-
-	}
 }

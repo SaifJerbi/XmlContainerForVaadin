@@ -14,7 +14,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.vaadin.tunis.saif.xmlcontainer.reflection.EntityParser;
-import org.vaadin.tunis.saif.xmlcontainer.test.Employee;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
