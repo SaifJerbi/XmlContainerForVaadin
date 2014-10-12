@@ -2,6 +2,7 @@ package org.vaadin.tunis.saif.xmlcontainer.dom;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,14 +33,14 @@ public class DomParser {
 	 * @throws InvocationTargetException
 	 * @throws InstantiationException
 	 */
-	public static List<Object> domObjectsBinding(Class classe, String filePath)
+	public static List<Object> domObjectsBinding(Class classe, InputStream inputStream)
 			throws ParserConfigurationException, SAXException, IOException,
 			IllegalAccessException, InvocationTargetException,
 			InstantiationException {
 
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
-		Document document = builder.parse(new File(filePath));
+		Document document = builder.parse(inputStream);
 
 		document.getDocumentElement().normalize();
 
