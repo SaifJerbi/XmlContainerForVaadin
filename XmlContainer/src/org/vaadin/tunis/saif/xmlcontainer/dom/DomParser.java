@@ -42,13 +42,14 @@ public class DomParser {
 		Document document = builder.parse(new File(filePath));
 
 		document.getDocumentElement().normalize();
-		
+
 		List<Object> objectList = new ArrayList();
 
 		HashMap<String, String> entityFieldMap = EntityParser
 				.getFieldsName(classe);
 
-		NodeList nodeList = document.getElementsByTagName(classe.getSimpleName());
+		NodeList nodeList = document.getElementsByTagName(classe
+				.getSimpleName().toLowerCase());
 		for (int i = 0; i < nodeList.getLength(); i++) {
 			// We have encountered an <[object]> tag.
 			Node node = nodeList.item(i);
@@ -59,8 +60,14 @@ public class DomParser {
 					Map.Entry pairs = (Map.Entry) itr.next();
 					Node item = ((Element) node).getElementsByTagName(
 							pairs.getKey().toString()).item(0);
-					EntityParser.invokeSetterMethod(object, pairs.getKey()
-							.toString(), item.getFirstChild().getNodeValue());
+					try {
+						EntityParser.invokeSetterMethod(object, pairs.getKey()
+								.toString(), item.getFirstChild()
+								.getNodeValue());
+					} catch (NullPointerException e) {
+
+					}
+
 				}
 				objectList.add(object);
 			}
